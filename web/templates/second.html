@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>MAGICAL QUIZ TOUR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./static/css/basicStyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/static/images/back.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    <a href="./">QUIZ</a>
+  </div>
+
+  {% block content %}
+
+<div class="w3-display-middle">
+</h1-->
+<p class="w3-large w3-center">{{ python["title"] }}</p>
+<hr class="w3-border-grey" style="margin:auto;width:40%">
+	<ul>
+		{% for dir in python["dir_list"] %}
+		<li>
+			<a class="w3-large w3-center" href="{{ python["current"] }}/{{ dir }}">{{ dir }}/</p>
+		</li>
+		{% endfor %}
+		{% for data in python["data_list"] %}
+		<li>
+			<a class="w3-large w3-center" href="{{ python["current"] }}?file_id={{ data }}">{{ data }}</p>
+		</li>
+		{% endfor %}
+	<ul>
+<br>
+</div>
+
+  {% endblock %}
+
+
+ </div>
+	</body>
+</html>
+
+
+
+
+
