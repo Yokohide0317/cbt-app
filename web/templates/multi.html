@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="w3-display-middle">
+</h1-->
+<p class="w3-large w3-center">{{ python["question"] }}</p>
+<hr class="w3-border-grey" style="margin:auto;width:40%">
+	<ul>
+		{% for c in python["choices"] %}
+		<li>
+			<p>{{ c }}</p>
+		</li>
+		{% endfor %}
+	<ul>
+<br>
+<br>
+    <a class="w3-large w3-center" href="{{ python["ans"] }}">答え</a>
+    <a class="w3-large w3-center">： {{ python["answer"] }}</a>
+    <br><br>
+    <a class="w3-large w3-center" href="{{ python["next"] }}">次へ</a>
+<br>
+</div>
+
+{% endblock %}
