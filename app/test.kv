@@ -6,7 +6,7 @@ TextWidget:
         size: root.size
 
         Label:
-            text: root.text
+            text: root.question
             text_size: self.size
             halign: 'left'
             valign: 'top'
@@ -19,10 +19,13 @@ TextWidget:
                 Rectangle:
                     pos: self.pos
                     size: self.size
-        Label:
-            text: "Answer"
+        Button:
+            id: button1
+            text: root.answer
             size_hint_y: 0.5
             color: 0, 0, 0, 1  # rgba
+
+            on_press: root.buttonClicked()
 
             canvas.before:
                 Color:
