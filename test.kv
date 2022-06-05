@@ -1,0 +1,32 @@
+TextWidget: 
+
+<TextWidget>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.size
+
+        Label:
+            text: root.text
+            text_size: self.size
+            halign: 'left'
+            valign: 'top'
+            size_hint_y: 1
+            color: 0, 0, 0, 1
+
+            canvas.before:
+                Color:
+                    rgba: 227,227,227,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+        Label:
+            text: "Answer"
+            size_hint_y: 0.5
+            color: 0, 0, 0, 1  # rgba
+
+            canvas.before:
+                Color:
+                    rgba: 227,227,227,1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
